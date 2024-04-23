@@ -33,7 +33,6 @@ client.on("connect", () => {
 });
 
 client.on("message", (topic: any, message: any) => {
-    // message is Buffer
     console.log(message.toString());
     // client.end();
 });
