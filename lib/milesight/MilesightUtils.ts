@@ -31,7 +31,6 @@ class MilesightUtils {
         }
 
         this.mqttClient.publish(this.topicRequest, JSON.stringify(message));
-
     }
 
     addProfile(properties: PropertiesProfile) {
@@ -54,8 +53,8 @@ class MilesightUtils {
             "method": "DELETE",
             "url": `/api/urprofiles/${id}`
         }
-        this.mqttClient.publish(this.topicRequest, JSON.stringify(message));
 
+        this.mqttClient.publish(this.topicRequest, JSON.stringify(message));
     }
 
 

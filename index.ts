@@ -23,12 +23,9 @@ const milesightUtils = new MilesightUtils(client, "serial");
 
 
 client.on("connect", () => {
-
-
     client.subscribe("presence", (err: any) => {
         if (!err) {
             console.log("dte");
-
             client.publish("presence", "Hello mqtt");
         }
 
@@ -36,15 +33,7 @@ client.on("connect", () => {
 });
 
 client.on("message", (topic: any, message: any) => {
-
-
-    milesightUtils.deleteProfile("f348fd65-b9a5-437e-aa7c-fb8121404c48")
-
-    // f348fd65-b9a5-437e-aa7c-fb8121404c48
-
-
     // message is Buffer
     console.log(message.toString());
-
     // client.end();
 });
